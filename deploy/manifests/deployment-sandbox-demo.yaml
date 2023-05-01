@@ -17,6 +17,7 @@ spec:
       labels:
         app.kubernetes.io/name: basic-demo
         app.kubernetes.io/instance: demo
+        backstage.io/kubernetes-id: sandbox-demo
     spec:
       topologySpreadConstraints:
         - maxSkew: 1
