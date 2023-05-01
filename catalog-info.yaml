@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sandbox-demo
+  description: A great cool demo
+  annotations:
+    circleci.com/project-slug: github/FairwindsOps/docker-demo
+    backstage.io/kubernetes-id: sandbox-demo
+  links:
+    - url: https://demo.sandbox.hillghost.com
+      title: Web UI
+spec:
+  type: website
+  lifecycle: production
+  owner: research
+  system: public-websites
