@@ -7,6 +7,7 @@ metadata:
     circleci.com/project-slug: github/FairwindsOps/docker-demo
     backstage.io/kubernetes-id: sandbox-demo
     backstage.io/kubernetes-namespace: basic-demo
+    argocd/app-name: sandbox-demo
   links:
     - url: https://demo.sandbox.hillghost.com
       title: Web UI
