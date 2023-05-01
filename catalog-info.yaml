@@ -8,7 +8,7 @@ metadata:
     backstage.io/kubernetes-id: sandbox-demo
     backstage.io/kubernetes-namespace: basic-demo
     argocd/app-name: sandbox-demo
-    backstage.io/techdocs-ref: ./
+    backstage.io/techdocs-ref: 'dir:.'
   links:
     - url: https://demo.sandbox.hillghost.com
       title: Web UI
