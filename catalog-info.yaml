@@ -5,7 +5,6 @@ metadata:
   description: A great cool demo
   annotations:
     circleci.com/project-slug: github/FairwindsOps/docker-demo
-    github.com/project-slug: FairwindsOps/docker-demo
     backstage.io/kubernetes-id: sandbox-demo
     backstage.io/kubernetes-namespace: basic-demo
     argocd/app-name: sandbox-demo
