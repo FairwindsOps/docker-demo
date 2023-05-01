@@ -11,7 +11,7 @@ metadata:
     - url: https://demo.sandbox.hillghost.com
       title: Web UI
 spec:
-  type: website
+  type: service
   lifecycle: production
   owner: research
   system: public-websites
