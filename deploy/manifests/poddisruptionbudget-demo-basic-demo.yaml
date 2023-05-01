@@ -1,0 +1,15 @@
+# Source: basic-demo/templates/pdb.yaml
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: sandbox-demo
+  namespace: basic-demo
+  labels:
+    backstage.io/kubernetes-id: sandbox-demo
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: basic-demo
+      app.kubernetes.io/instance: demo
+

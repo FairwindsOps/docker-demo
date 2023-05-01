@@ -1,0 +1,29 @@
+# Source: basic-demo/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sandbox-demo
+  namespace: basic-demo
+  labels:
+    app.kubernetes.io/name: basic-demo
+    backstage.io/kubernetes-id: sandbox-demo
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx-ingress
+  tls:
+    - hosts:
+        - "demo.sandbox.hillghost.com"
+      secretName: basic-demo-tls
+  rules:
+    - host: "demo.sandbox.hillghost.com"
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: sandbox-demo
+                port:
+                  name: http
+

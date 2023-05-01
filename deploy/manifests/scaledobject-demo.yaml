@@ -1,0 +1,20 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: basic-demo
+  namespace: basic-demo
+  labels:
+    backstage.io/kubernetes-id: sandbox-demo
+spec:
+  scaleTargetRef:
+    name: sandbox-demo
+  minReplicaCount: 2
+  maxReplicaCount: 20
+  triggers:
+  - type: prometheus
+    metadata:
+      serverAddress: http://prometheus-operated.fw-prometheus:9090
+      metricName: nginx_ingress_controller_requests
+      threshold: '20'
+      query: round(sum(rate(nginx_ingress_controller_requests{host="demo.sandbox.hillghost.com"}[1m])))
+

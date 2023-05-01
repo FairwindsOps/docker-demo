@@ -1,0 +1,64 @@
+# Source: basic-demo/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sandbox-demo
+  namespace: basic-demo
+  labels:
+    app.kubernetes.io/name: basic-demo
+    backstage.io/kubernetes-id: sandbox-demo
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: basic-demo
+      app.kubernetes.io/instance: demo
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: basic-demo
+        app.kubernetes.io/instance: demo
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: fargle
+          whenUnsatisfiable: ScheduleAnyway
+      containers:
+        - name: basic-demo
+          image: "quay.io/fairwinds/docker-demo:1.2.0"
+          imagePullPolicy: Always
+          env:
+            - name: REFRESH_INTERVAL
+              value: "500"
+            - name: TITLE
+              value: "Kubernetes Demo"
+            - name: METADATA
+              value: "Andy's Kube Demo for IDP!"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          securityContext:
+            runAsUser: 1200
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            limits:
+              cpu: 500m
+              memory: 200Mi
+            requests:
+              cpu: 500m
+              memory: 200Mi
+
