@@ -11,6 +11,8 @@ metadata:
   links:
     - url: https://demo.sandbox.hillghost.com
       title: Web UI
+    - url: https://argocd.sandbox.hillghost.com/applications/argocd/sandbox-demo
+      title: ArgoCD
 spec:
   type: service
   lifecycle: production
