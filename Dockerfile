@@ -13,11 +13,10 @@ RUN cp -f ui/semantic.theme.config ui/semantic/src/theme.config && \
     cp -rf ui/semantic.theme/* ui/semantic/src/themes/app
 RUN cd ui/semantic && gulp build
 
-FROM golang:1.11-alpine as app
+FROM golang:1.20-alpine as app
 RUN apk add -U build-base git
 COPY . /go/src/app
 WORKDIR /go/src/app
-ENV GO111MODULE=on
 RUN go build -a -v -tags 'netgo' -ldflags '-w -linkmode external -extldflags -static' -o docker-demo .
 
 FROM alpine:latest

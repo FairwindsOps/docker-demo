@@ -4,8 +4,11 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
-    "semantic-ui": "2.2.13"
+    "semantic-ui": "2.4.0"
   },
   "author": "ehazlett",
-  "license": ""
+  "license": "",
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  }
 }
