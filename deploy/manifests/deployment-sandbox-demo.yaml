@@ -19,6 +19,11 @@ spec:
         app.kubernetes.io/instance: demo
         backstage.io/kubernetes-id: sandbox-demo
     spec:
+      nodeSelector:
+        topology.kubernetes.io/zone: us-west-2a
+        karpenter.sh/capacity-type: spot
+        karpenter.k8s.aws/instance-family: m5a
+        karpenter.k8s.aws/instance-size: large
       topologySpreadConstraints:
         - maxSkew: 1
           topologyKey: fargle
