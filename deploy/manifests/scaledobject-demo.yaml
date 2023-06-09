@@ -9,7 +9,7 @@ spec:
   scaleTargetRef:
     name: sandbox-demo
   minReplicaCount: 2
-  maxReplicaCount: 500
+  maxReplicaCount: 100
   triggers:
   - type: prometheus
     metadata:
