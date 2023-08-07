@@ -15,6 +15,6 @@ spec:
     metadata:
       serverAddress: http://prometheus-operated.fw-prometheus:9090
       metricName: nginx_ingress_controller_requests
-      threshold: '20'
+      threshold: '40'
       query: round(sum(rate(nginx_ingress_controller_requests{host="demo.sandbox.hillghost.com"}[1m])))
 
