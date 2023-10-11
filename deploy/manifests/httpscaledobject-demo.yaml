@@ -1,0 +1,10 @@
+kind: HTTPScaledObject
+apiVersion: http.keda.sh/v1alpha1
+metadata:
+  name: sandbox-demo
+spec:
+  scaleTargetRef:
+    deployment: sandbox-demo
+    service: sandbox-demo
+    port: 80
+
