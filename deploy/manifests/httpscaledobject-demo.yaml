@@ -3,6 +3,7 @@ apiVersion: http.keda.sh/v1alpha1
 metadata:
   name: sandbox-demo
 spec:
+  host: "demo.sandbox.hillghost.com"
   scaleTargetRef:
     deployment: sandbox-demo
     service: sandbox-demo
