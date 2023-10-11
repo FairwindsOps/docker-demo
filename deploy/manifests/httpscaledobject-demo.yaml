@@ -5,8 +5,7 @@ metadata:
 spec:
   host: "demo.sandbox.hillghost.com"
   replicas:
-    min: 2
-    max: 100
+    max: 50
   targetPendingRequests: 10
   scaleTargetRef:
     deployment: sandbox-demo
