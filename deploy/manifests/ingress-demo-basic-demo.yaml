@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: sandbox-demo
-  namespace: basic-demo
+  namespace: keda
   labels:
     app.kubernetes.io/name: basic-demo
     backstage.io/kubernetes-id: sandbox-demo
@@ -23,7 +23,7 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: sandbox-demo
+                name: keda-add-ons-http-interceptor-proxy
                 port:
                   name: http
 
