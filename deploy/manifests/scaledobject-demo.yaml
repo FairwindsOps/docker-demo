@@ -22,6 +22,6 @@ spec:
     metadata:
       # Required
       timezone: America/Denver  # The acceptable values would be a value from the IANA Time Zone Database.
-      start: 30 * * * *       # Every hour on the 30th minute
-      end: 45 * * * *         # Every hour on the 45th minute
-      desiredReplicas: "0"
+      start: 40 * * * *       # Every hour on the 30th minute
+      end: 50 * * * *         # Every hour on the 45th minute
+      desiredReplicas: "1"
