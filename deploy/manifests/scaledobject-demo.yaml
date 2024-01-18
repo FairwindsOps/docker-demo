@@ -9,7 +9,7 @@ spec:
   scaleTargetRef:
     name: sandbox-demo
   minReplicaCount: 0
-  maxReplicaCount: 5
+  maxReplicaCount: 1
   triggers:
   - type: prometheus
     metadata:
@@ -21,6 +21,6 @@ spec:
   - type: cron
     metadata:
       timezone: America/Denver
-      start: 3 * * * *
-      end: 10 * * * *
+      start: 23 * * * *
+      end: 45 * * * *
       desiredReplicas: "0"
