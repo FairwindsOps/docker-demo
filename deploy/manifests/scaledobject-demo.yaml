@@ -20,14 +20,7 @@ spec:
       query: sum(rate(nginx_ingress_controller_requests{host="demo.sandbox.hillghost.com"}[1m]))
   - type: cron
     metadata:
-      # Required
-      timezone: America/Denver  # The acceptable values would be a value from the IANA Time Zone Database.
-      start: 40 * * * *
-      end: 50 * * * *
-      desiredReplicas: "1"
-  - type: cron
-    metadata:
       timezone: America/Denver
-      start: 50 * * * *
-      end: 59 * * * *
+      start: 3 * * * *
+      end: 10 * * * *
       desiredReplicas: "0"
