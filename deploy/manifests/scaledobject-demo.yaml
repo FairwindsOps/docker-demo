@@ -16,7 +16,7 @@ spec:
       serverAddress: http://prometheus-operated.fw-prometheus:9090
       metricName: nginx_ingress_controller_requests
       threshold: '5'
-      activationThreshold: '1'
+      activationThreshold: '.001'
       query: sum(rate(nginx_ingress_controller_requests{host="demo.sandbox.hillghost.com"}[5m]))
   - type: cron
     metadata:
