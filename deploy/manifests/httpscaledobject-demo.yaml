@@ -1,14 +1,14 @@
-kind: HTTPScaledObject
-apiVersion: http.keda.sh/v1alpha1
-metadata:
-  name: sandbox-demo
-spec:
-  host: "demo.sandbox.hillghost.com"
-  replicas:
-    max: 50
-  targetPendingRequests: 10
-  scaleTargetRef:
-    deployment: sandbox-demo
-    service: sandbox-demo
-    port: 80
-
+#kind: HTTPScaledObject
+#apiVersion: http.keda.sh/v1alpha1
+#metadata:
+#  name: sandbox-demo
+#spec:
+#  host: "demo.sandbox.hillghost.com"
+#  replicas:
+#    max: 50
+#  targetPendingRequests: 10
+#  scaleTargetRef:
+#    deployment: sandbox-demo
+#    service: sandbox-demo
+#    port: 80
+#
