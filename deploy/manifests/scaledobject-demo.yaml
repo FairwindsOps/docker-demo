@@ -24,3 +24,9 @@ spec:
       start: 22 * * * *
       end: 23 * * * *
       desiredReplicas: "0"
+  - type: cron
+    metadata:
+      timezone: America/Denver
+      start: 23 * * * *
+      end: 2 * * * *
+      desiredReplicas: "0"
