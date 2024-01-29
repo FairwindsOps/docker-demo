@@ -29,4 +29,4 @@ spec:
       timezone: America/Denver
       start: 23 * * * *
       end: 2 * * * *
-      desiredReplicas: "0"
+      desiredReplicas: "1"
