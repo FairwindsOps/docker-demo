@@ -22,5 +22,5 @@ spec:
     metadata:
       timezone: America/Denver
       start: 9 * * * 1-5
-      end: 17 * * * 1-5
+      end: 14 * * * 1-5
       desiredReplicas: "1"
