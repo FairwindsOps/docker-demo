@@ -21,12 +21,12 @@ spec:
   - type: cron
     metadata:
       timezone: America/Denver
-      start: 22 * * * *
-      end: 23 * * * *
+      start: 16 * * * *
+      end: 20 * * * *
       desiredReplicas: "0"
   - type: cron
     metadata:
       timezone: America/Denver
-      start: 23 * * * *
-      end: 2 * * * *
+      start: 20 * * * *
+      end: 16 * * * *
       desiredReplicas: "1"
