@@ -21,6 +21,6 @@ spec:
   - type: cron
     metadata:
       timezone: America/Denver
-      start: 13 * * * *
-      end: 14 * * * *
+      start: 14 * * * *
+      end: 15 * * * *
       desiredReplicas: "0"
